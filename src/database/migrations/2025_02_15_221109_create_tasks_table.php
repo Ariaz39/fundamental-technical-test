@@ -6,19 +6,23 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateTasksTable extends Migration
 {
-    public function up(): void
+    public function up()
     {
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->unsignedBigInteger('user_id');
+            $table->string('title'); // required string
             $table->text('description')->nullable();
-            $table->enum('status', ['pending', 'done'])
-                ->default('pending');
+            $table->enum('status', ['pending', 'done'])->default('pending');
             $table->timestamps();
+
+            $table->foreign('user_id')
+                ->references('id')->on('users')
+                ->onDelete('cascade');
         });
     }
 
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('tasks');
     }
