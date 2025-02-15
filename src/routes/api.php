@@ -1,11 +1,14 @@
 <?php
 
 use App\Http\Controllers\AuthController;
-use Illuminate\Http\Request;
+use App\Models\Task;
 use Illuminate\Support\Facades\Route;
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware('auth:api')->group(function () {
+    // Ruta adicional de prueba
+    Route::get('/test', function () {
+        return response()->json(Task::all());
+    });
 });
 
 Route::post('/register', [AuthController::class, 'register']);
