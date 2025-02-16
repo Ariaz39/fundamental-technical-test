@@ -8,7 +8,8 @@ class TaskRepository
 {
     public function getAllTasksByUser($userId)
     {
-        return Task::where('user_id', $userId);
+        return Task::where('user_id', $userId)
+            ->get();
     }
 
     public function getTaskByIdAndUser($id, $userId)
