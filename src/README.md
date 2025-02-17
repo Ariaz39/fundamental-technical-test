@@ -146,6 +146,7 @@ Antes de iniciar, asegúrate de contar con:
 ```
 fundamental/
 │
+├── _devtools/             # Herramientas para desarrolladores
 ├── docker/                # Configuración Docker
 │
 ├── src/                   # Código fuente Laravel

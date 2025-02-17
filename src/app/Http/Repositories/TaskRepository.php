@@ -3,7 +3,7 @@
 namespace App\Http\Repositories;
 
 use App\Models\Task;
-use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 class TaskRepository
 {
@@ -11,12 +11,11 @@ class TaskRepository
      * Obtiene todas las tareas de un usuario.
      *
      * @param int $userId ID del usuario.
-     * @return Collection
      */
-    public function getAllTasksByUser(int $userId): Collection
+    public function getAllTasksByUser(int $userId): LengthAwarePaginator
     {
         return Task::where('user_id', $userId)
-            ->get();
+            ->paginate(10);
     }
 
     /**

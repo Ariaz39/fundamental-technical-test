@@ -4,6 +4,7 @@ namespace App\Http\Services;
 
 use App\Models\Task;
 use App\Http\Repositories\TaskRepository;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 class TaskService
 {
@@ -23,9 +24,8 @@ class TaskService
      * Lista todas las tareas pertenecientes a un usuario.
      *
      * @param int $userId ID del usuario.
-     * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
      */
-    public function listTasksForUser(int $userId)
+    public function listTasksForUser(int $userId): LengthAwarePaginator
     {
         return $this->taskRepository->getAllTasksByUser($userId);
     }
