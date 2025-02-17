@@ -104,15 +104,15 @@ Antes de iniciar, asegúrate de contar con:
 
 10. Generar la clave de JWT (necesario para que los tokens funcionen):
 
-   ```bash
-   php artisan jwt:secret
-   ```
+      ```bash
+      php artisan jwt:secret
+      ```
 
 11. Asignar permisos a las carpetas de almacenamiento:
 
-   ```bash
-    chmod -R 777 storage
-    ```
+      ```bash
+       chmod -R 777 storage
+      ```
 
 ---
 🌐 **Acceso a la aplicación:**
