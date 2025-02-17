@@ -11,13 +11,15 @@ desplegado mediante **Docker**.
 
 Se implementó **JWT (JSON Web Token)** para la autenticación y protección de las rutas. La API gestiona tareas y está
 estructurada bajo el **patrón de diseño Servicio y Repositorio**.  
+
 Para garantizar la integridad de los datos, se utilizaron **Form Requests** en la validación.
 
 Además, se desarrollaron **pruebas automatizadas con PHPUnit**, empleando una **base de datos SQLite en memoria**.  
+
 El proyecto incluye **seeders y factories** para la generación de datos de prueba.
 
-Finalmente, se proporciona un archivo **`collection.json`** que puede importarse directamente en herramientas como *
-*Postman**, **Insomnia** u otras, facilitando así las pruebas de los endpoints expuestos.
+Finalmente, se proporciona un archivo **`collection.json`** que puede importarse directamente en herramientas como **Postman**, 
+**Insomnia** u otras, facilitando así las pruebas de los endpoints expuestos.
 
 🧑‍💻 **Tecnologías utilizadas:**
 
@@ -119,7 +121,7 @@ Antes de iniciar, asegúrate de contar con:
 
 Una vez finalizados los pasos, la API estará disponible en:
 
-- **API:** [http://localhost:8080](http://localhost:8080)
+- **API:** [http://localhost:8080/api/](http://localhost:8080/api/)
 
 ---
 
@@ -223,8 +225,8 @@ fundamental/
 
 ## ✍️ Autor
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Ing.%20Alejandro%20Arias-blue?logo=linkedin)](https://www.linkedin.com/in/alejandro-arias/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Ing.%20Alejandro%20Arias-blue?logo=linkedin)](https://www.linkedin.com/in/alejandro-ariaz/)
 [![GitHub](https://img.shields.io/badge/GitHub-Ariaz39-black?logo=github)](https://github.com/Ariaz39/)
 
-**Ing. Alejandro Arias**  
-*Software Engineer | Fullstack Developer*
+**Alejandro Arias**  
+*Systems Engineer | Fullstack Developer*
